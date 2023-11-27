@@ -340,7 +340,7 @@ void MMTkHeap::prepare_for_verify() {
 void MMTkHeap::initialize_serviceability() {//OK
 
 
-  _mmtk_pool = new MMTkMemoryPool(_start, _end, "MMTk pool", MinHeapSize, false);
+  _mmtk_pool = new MMTkMemoryPool(_start, _end, "MMTk pool", MinHeapSize, true);
 
   _mmtk_manager = new GCMemoryManager("MMTk GC");
   _mmtk_manager->add_pool(_mmtk_pool);
